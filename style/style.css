@@ -217,9 +217,35 @@ body {
   color: #fff;
 }
 
+.contact__list-item {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 20px;
+}
+
 .contact__link:hover,
 .experience__link:hover {
   text-decoration: underline;
+}
+
+.contact__link::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position:absolute;
+  top: -7px;
+  left: -6px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.link-phone::before {
+  background-image: url(../img/phone-icon.png);
+}
+
+.link-email::before {
+  background-image: url(../img/email-icon.png);
 }
 
 .skills,
@@ -245,11 +271,13 @@ body {
 }
 
 .footer__link {
-  width: 80px;
-  height: 80px;
-  margin: 0 20px;
+  width: 60px;
+  height: 60px;
+  margin: 0 10px;
+  line-height: 60px;
 }
 
 .footer__link img {
-  width: 100%
+  object-fit: cover;
+  vertical-align: middle;
 }
